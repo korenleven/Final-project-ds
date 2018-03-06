@@ -938,7 +938,7 @@ def get_next(text,token,model,vocabulary):
     return vocabulary[vocabulary['code']== match]['word'].values[0]
 ```
 
-Define a function the get tokenizer, model and vocabulary for each person and create a new message by get each time the next word until getting 'NEWMESSAGE' delimiter or the length of the message get to 10.
+Define a function the get tokenizer, model and vocabulary for each person and create a new message by get each time the next word until getting 'DELIMITER' delimiter or the length of the message get to 10.
 
 
 ```python
