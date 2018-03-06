@@ -1,7 +1,7 @@
 
-#Final Project
+# Final Project
 
-##PART 1
+## PART 1
 
 
 ```python
@@ -15,7 +15,7 @@ df['sender'] = df['sender'].astype(str)
 df['message'] = df['message'].astype(str)
 ```
 
-###Preprocessing:
+### Preprocessing:
 Import our 5 whatsapp personal messages, and translate them from hebrew to english messages.
 Collapse last 400 messages from each file to single file calls 'messages'.
 Before the translation we delete all the characters that not match to the above:
@@ -121,7 +121,7 @@ clean_messages = [mess for mess in clean_messages if mess != '']
 
 ```
 
-##PART 2
+## PART 2
 
 
 Create the bag-of-words function, that use the CountVectorizer function, We choose max_features to 1000 for the high frequency words, the number is not to big because we dont want to detract the results. We set the stopwords parameter to english to support english stopwords.
@@ -186,7 +186,7 @@ gbc_score
 
 
 
-###Linear Discriminant Analysis
+### Linear Discriminant Analysis
 Linear discriminant analysis (LDA) is a generalization of Fisher's linear discriminant, a method used in statistics, pattern recognition and machine learning to find a linear combination of features that characterizes or separates two or more classes of objects or events. The resulting combination may be used as a linear classifier, or, more commonly, for dimensionality reduction before later classification.
 
 
@@ -238,7 +238,7 @@ plt.show()
 
 We can see the LDA algorithm has the highest results.
 
-##PART 3
+## PART 3
 
 
 ```python
@@ -388,7 +388,7 @@ ori_input = ori_text_mtx[:-3]
 ori_output = ori_text_mtx[3:]
 ```
 
-###Recurrent Neural Network
+### Recurrent Neural Network
 We use simple recurrent neural network for adding a full connected Recurrent neural network.
 We create vocabulary for each person and removes duplicates.
 
@@ -1062,8 +1062,8 @@ for item in all_ori_messages:
 
 ```
 
-##PART 4
-###Gradient boosting Result
+## PART 4
+### Gradient boosting Result
 we report the accuracy of the Gradient boosting alogrithm on every person.
 By using the model we trained in part 2 and the messages we create in part 3.
 
@@ -1220,7 +1220,7 @@ plt.show()
 ![png](project_files/project_74_1.png)
 
 
-###Linear discriminant analysis Result
+### Linear discriminant analysis Result
 we report the accuracy of the Linear discriminant analysis alogrithm on every person.
 By using the model we trained in part 2 and the messages we create in part 3.
 
@@ -1374,19 +1374,7 @@ pd.DataFrame(data, rows_list, columns_list)
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1427,5 +1415,5 @@ pd.DataFrame(data, rows_list, columns_list)
 
 As we can see, the Gradient boosting algorithm has the best results among the persons.
 
-##Conclusion
+## Conclusion
 The results that we got in the process very highly and specific, but in the current version we predicts the next word in the sentence in random way with the highly frequency to the best word, but if we will learn the connections between words, then we can predict in more learned manner better words and get better results.
